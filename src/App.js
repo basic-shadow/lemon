@@ -4,6 +4,7 @@ import {HomePage, CatalogPage} from './components';
 import styles from './App.module.css';
 
 import { fetchData } from './api'
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 
 class App extends React.Component {
     constructor(props) {
@@ -18,10 +19,12 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className={styles.container}>
-                <HomePage />
-                <CatalogPage />
-            </div>
+            <Router>
+                <Switch>
+                    <Route exact path="/" component={HomePage} />
+                    <Route path="/catalog" component={CatalogPage} />
+                </Switch>
+            </Router>
         )
     }
 }
