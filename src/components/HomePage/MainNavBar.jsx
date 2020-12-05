@@ -10,15 +10,16 @@ import { RiArrowDropDownLine, RiYoutubeFill } from 'react-icons/ri';
 
 import { FaTelegram, FaInstagram, FaFacebookF } from 'react-icons/fa'
 
+import { Button } from '@material-ui/core';
+
 const MainNavBar = () => {
-    const { signin, setSignin } = useState(false);
 
     return (
         <nav className={styles.mainNav}>
-            <NavLink to="/" className={styles.logo}>
+            <a href="/" className={styles.logo}>
                 Lemon.isla
-            </NavLink>
-            <ul className={styles.mainNavlinks} style={{ position: 'relative', right: '8%', width: '20%' }}>
+            </a>
+            <ul className={styles.mainNavlinks} style={{ position: 'relative', top: '-6%', right: '8%', width: '20%' }}>
                 {mainCompItems.map((item, index) => {
                     return (
                         <li key={index}>
@@ -34,14 +35,17 @@ const MainNavBar = () => {
                 {mainBarItems.map((item, index) => {
                     return (
                         <li key={index}>
-                            <NavLink to={item.url} className={styles.mainBarItems}>
+                            <NavLink to={item.url} className={styles.mainBarItems} >
                                 {item.title}
                             </NavLink>
                         </li>
                     )
                 })}
             </ul>
-
+            <Button className={styles.btn}
+                href='/signin' color='secondary' variant="outlined" size="small" disableElevation >
+                Sign In
+            </Button>
             <ul style={{ display: 'flex', position: 'relative', justifyContent: 'space-around', width: '12%', left: '3%' }}>
                 <FaTelegram />
                 <FaInstagram />

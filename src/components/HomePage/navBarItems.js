@@ -8,11 +8,6 @@ export const mainBarItems = [
         title: 'Contact',
         url: '#',
         cName: 'barItems'
-    },
-    {
-        title: 'Sign in',
-        url: '/signin',
-        cName: 'barItems'
     }
 ];
 
@@ -34,7 +29,7 @@ export const mainCompItems = [
 export const catalogNavItems = [
     {
         title: 'Home',
-        url: '#',
+        url: '/',
         cName: 'catalogItems'
     },
     {
