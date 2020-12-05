@@ -11,7 +11,7 @@ export const mainBarItems = [
     },
     {
         title: 'Sign in',
-        url: '#',
+        url: '/signin',
         cName: 'barItems'
     }
 ];
@@ -19,17 +19,14 @@ export const mainBarItems = [
 export const mainCompItems = [
     {
         title: 'Almaty',
-        url: '#',
         cName: 'compItems'
     },
     {
         title: 'English',
-        url: '#',
         cName: 'compItems'
     },
     {
         title: 'KZT',
-        url: '#',
         cName: 'compItems'
     },
 ];

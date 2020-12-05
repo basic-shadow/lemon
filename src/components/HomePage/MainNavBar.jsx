@@ -11,20 +11,20 @@ import { RiArrowDropDownLine, RiYoutubeFill } from 'react-icons/ri';
 import { FaTelegram, FaInstagram, FaFacebookF } from 'react-icons/fa'
 
 const MainNavBar = () => {
-    const { clicked, setClicked } = useState(false);
+    const { signin, setSignin } = useState(false);
 
     return (
         <nav className={styles.mainNav}>
-            <h1 className={styles.logo}>
-                Lemon
-            </h1>
+            <NavLink to="/" className={styles.logo}>
+                Lemon.isla
+            </NavLink>
             <ul className={styles.mainNavlinks} style={{ position: 'relative', right: '8%', width: '20%' }}>
                 {mainCompItems.map((item, index) => {
                     return (
                         <li key={index}>
-                            <NavLink to={item.url} className={styles.mainCompItems}>
+                            <h4 className={styles.mainCompItems}>
                                 {item.title}
-                            </NavLink>
+                            </h4>
                             <RiArrowDropDownLine style={{ position: 'relative', top: '5px', fontSize: '20px', color: "rgb(77, 77, 77)" }} />
                         </li>
                     )

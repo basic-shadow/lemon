@@ -3,7 +3,7 @@ import React from "react";
 import { Card, CardContent, Typography, Grid, Button, CardActionArea } from "@material-ui/core";
 
 import styles from "./HomePage.module.css";
-// import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 const HomePage = () => {
     const obj = ['Men', 'Women', 'Kids'];

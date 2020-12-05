@@ -6,26 +6,34 @@ import styles from "./HomePage.module.css";
 
 import { NavLink } from "react-router-dom";
 
+import { BsSearch } from 'react-icons/bs';
+
+import { FormControl, TextField } from '@material-ui/core'
+
+import lemon from '../../images/lemon.png';
+
 const CatalogNavBar = () => {
     const { clicked, setClicked } = useState(false);
 
     return (
-        <nav className={styles.mainNav} style={{ background: "0", marginTop: "7%" }}>
-            <h1>
-                Logo
-            </h1>
-            <ul className={styles.mainNavlinks} style={{ position: 'relative', right: '15%', width: '50%' }}>
+        <nav className={styles.catalogNav} style={{ visibility: clicked ? 'hidden' : 'visible' }}>
+            <img src={lemon} className={styles.lemon} />
+            <ul className={styles.mainNavlinks} style={{ width: '50%' }}>
                 {catalogNavItems.map((item, index) => {
                     return (
                         <li key={index}>
                             <NavLink to={item.url} className={styles.catalogItems}>
                                 {item.title}
                             </NavLink>
-
                         </li>
                     )
                 })}
             </ul>
+            <FormControl className={styles.searchBar}>
+                <TextField placeholder="Search" variant="outlined" />
+                <BsSearch style={{ cursor: 'pointer' }} onClick={() => alert('isla in the building')}
+                    style={{ position: 'relative', right: '8%' }} />
+            </FormControl>
         </nav >
     )
 }
