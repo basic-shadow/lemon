@@ -1,5 +1,6 @@
 {
-  "homepage": "http://basic-shadow.github.io/lemon",
+  "homepage": "lemon.io/",
+  "signin" : "lemon.io/signin",
   "name": "lemon",
   "version": "0.1.0",
   "private": true,
