@@ -1,6 +1,6 @@
 {
-  "homepage": "lemon.isla.io/",
-  "signin" : "lemon.isla.io/signin",
+  "homepage": "https://lemon.isla.io/",
+  "signin" : "https://lemon.isla.io/signin",
   "name": "lemon",
   "version": "0.1.0",
   "private": true,
