@@ -1,6 +1,6 @@
 {
-  "homepage": "https://lemon.isla.io/",
-  "signin" : "https://lemon.isla.io/signin",
+  "homepage": "https://basic-shadow.github.io/lemon/",
+  "signin" : "https://basic-shadow.github.io/lemon/signin",
   "name": "lemon",
   "version": "0.1.0",
   "private": true,
