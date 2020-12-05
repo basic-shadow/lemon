@@ -13,6 +13,15 @@ import { FaTelegram, FaInstagram, FaFacebookF } from 'react-icons/fa'
 import { Button } from '@material-ui/core';
 
 const MainNavBar = () => {
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    }
+
+    const handleClose = () => {
+        setOpen(false);
+    }
 
     return (
         <nav className={styles.mainNav}>
@@ -23,7 +32,7 @@ const MainNavBar = () => {
                 {mainCompItems.map((item, index) => {
                     return (
                         <li key={index}>
-                            <h4 className={styles.mainCompItems} onMouseEnter={this.handleOpen} onMouseLeave={this.handleClose}>
+                            <h4 className={styles.mainCompItems} onMouseEnter={handleOpen} onMouseLeave={handleClose}>
                                 {item.title}
                             </h4>
                             <RiArrowDropDownLine style={{ position: 'relative', top: '5px', fontSize: '20px', color: "rgb(77, 77, 77)" }} />
