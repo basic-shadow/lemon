@@ -10,37 +10,55 @@ import { RiArrowDropDownLine, RiYoutubeFill } from 'react-icons/ri';
 
 import { FaTelegram, FaInstagram, FaFacebookF } from 'react-icons/fa'
 
-import { Button } from '@material-ui/core';
+import { FormControl, Button, Select, Menu, MenuItem, Typography, TextField, Popover } from '@material-ui/core';
 
 const MainNavBar = () => {
     const [open, setOpen] = useState(false);
+    const [anchorEl, setAnchorEl] = useState(null);
 
-    const handleOpen = () => {
+    const handleOpen = (event) => {
         setOpen(true);
+        setAnchorEl(event.currentTarget);
     }
 
     const handleClose = () => {
         setOpen(false);
+        setAnchorEl(null);
     }
 
+    console.log(open);
     return (
         <nav className={styles.mainNav}>
             <a href="/" className={styles.logo}>
                 Lemon.isla
             </a>
-            <ul className={styles.mainNavlinks} style={{ position: 'relative', top: '-6%', right: '8%', width: '20%' }}>
-                {mainCompItems.map((item, index) => {
-                    return (
-                        <li key={index}>
-                            <h4 className={styles.mainCompItems} onMouseEnter={handleOpen} onMouseLeave={handleClose}>
-                                {item.title}
-                            </h4>
-                            <RiArrowDropDownLine style={{ position: 'relative', top: '5px', fontSize: '20px', color: "rgb(77, 77, 77)" }} />
-                        </li>
-                    )
-                })}
-            </ul>
-            <ul className={styles.mainNavlinks} style={{ position: 'relative', left: '12%' }}  >
+
+            <Typography
+                aria-owns={open ? 'mouse-over-popover' : undefined}
+                aria-haspopup="true"
+                onMouse
+            >
+                Hover with a Popover.
+      </Typography>
+            <Popover
+                id="mouse-over-popover"
+                open={open}
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'left',
+                }}
+                transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                }}
+                onClose={handleClose}
+                disableRestoreFocus
+            >
+                <Typography>I use Popover.</Typography>
+            </Popover>
+
+            < ul className={styles.mainNavlinks} style={{ position: 'relative', left: '12%' }}  >
                 {mainBarItems.map((item, index) => {
                     return (
                         <li key={index}>
@@ -52,7 +70,7 @@ const MainNavBar = () => {
                 })}
             </ul>
             <Button className={styles.btn}
-                href='/signin' color='secondary' variant="outlined" size="small" disableElevation >
+                href='/signin' color='secondary' variant="outlined" size="small" disableElevation>
                 Sign In
             </Button>
             <ul style={{ display: 'flex', position: 'relative', justifyContent: 'space-around', width: '12%', left: '3%' }}>

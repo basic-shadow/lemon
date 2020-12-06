@@ -14,15 +14,32 @@ export const mainBarItems = [
 export const mainCompItems = [
     {
         title: 'Almaty',
-        cName: 'compItems'
+        cName: 'compItems',
+        dropdowns: [
+            'Almaty',
+            'Nur-Sultan',
+            'Aktobe'
+        ]
     },
     {
         title: 'English',
-        cName: 'compItems'
+        cName: 'compItems',
+        dropdowns: [
+            'English',
+            'Kazakh',
+            'Russian',
+            'Half-Kazakh'
+        ]
     },
     {
         title: 'KZT',
-        cName: 'compItems'
+        cName: 'compItems',
+        dropdowns: [
+            'KZT',
+            'USD',
+            'RUB',
+            'EUR'
+        ]
     },
 ];
 

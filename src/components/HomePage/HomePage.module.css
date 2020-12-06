@@ -37,7 +37,7 @@
 	display: flex;
 	list-style: none;
 	justify-content: space-around;
-	width: 15%;
+	width: 10%;
 	height: 85%;
 }
 
@@ -52,6 +52,11 @@
 	font-size: 12px;
 	font-weight: 500;
 	color: rgb(77, 77, 77);
+}
+
+.compItems {
+	border-radius: 4px;
+	font-size: 32px;
 }
 
 .catalogNav {
