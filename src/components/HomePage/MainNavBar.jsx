@@ -50,13 +50,13 @@ const MainNavBar = () => {
                 // if (anchorRefCity.current[0] && anchorRefCity.current[0].contains(event.target)) {
                 //     return;
                 // }
-                setOpenCity(prevState => prevState = false);
+                setOpenCity(false);
                 break;
             case 'LangBtn':
-                setOpenLang(prevState => prevState = false);
+                setOpenLang(false);
                 break;
             case 'CurrBtn':
-                setOpenCurr(prevState => prevState = false);
+                setOpenCurr(false);
                 break;
             default:
                 console.log('nothing');
@@ -64,16 +64,15 @@ const MainNavBar = () => {
         }
     };
     const handleOpen = (event) => {
-        // console.log(event.currentTarget.id);
         switch (event.currentTarget.id) {
             case 'CityBtn':
-                setOpenCity(prevState => prevState = true);
+                setOpenCity(true);
                 break;
             case 'LangBtn':
-                setOpenLang(prevState => prevState = true);
+                setOpenLang(true);
                 break;
             case 'CurrBtn':
-                setOpenCurr(prevState => prevState = true);
+                setOpenCurr(true);
                 break;
             default:
                 console.log('nothing');
@@ -106,7 +105,6 @@ const MainNavBar = () => {
                 setOpenCurr(false);
                 break;
             default:
-                // console.log('nothing');
                 break;
         }
     }
@@ -145,7 +143,7 @@ const MainNavBar = () => {
                             aria-controls={openCity ? 'City' : undefined}
                             aria-haspopup="true"
                             onMouseEnter={handleOpen}
-                            // onMouseLeave={handleClose}
+                            onMouseLeave={handleClose}
                             onClick={handleToggle}
                             style={{ height: '20px' }}
                         >
@@ -158,9 +156,9 @@ const MainNavBar = () => {
                                     {...TransitionProps}
                                     style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
                                 >
-                                    <Paper>
+                                    <Paper id='CityBtn' onMouseOver={handleOpen} onMouseLeave={handleClose}>
                                         <ClickAwayListener onClickAway={handleClose}>
-                                            <MenuList autoFocusItem={openCity} id='City' onMouseLeave={handleClose} onKeyDown={handleListKeyDown}>
+                                            <MenuList autoFocusItem={openCity} id='City' onKeyDown={handleListKeyDown}>
                                                 {city.dropdowns.map((dropdown, index) => {
                                                     return <MenuItem key={index} id='CityBtn' onClick={handleClick}>{dropdown}</MenuItem>
                                                 })}
@@ -182,7 +180,7 @@ const MainNavBar = () => {
                             aria-controls={openLang ? 'Lang' : undefined}
                             aria-haspopup="true"
                             onMouseEnter={handleOpen}
-                            // onMouseLeave={handleClose}
+                            onMouseLeave={handleClose}
                             onClick={handleToggle}
                             style={{ height: '20px' }}
                         >
@@ -195,9 +193,9 @@ const MainNavBar = () => {
                                     {...TransitionProps}
                                     style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
                                 >
-                                    <Paper>
+                                    <Paper id='LangBtn' onMouseOver={handleOpen} onMouseLeave={handleClose}>
                                         <ClickAwayListener onClickAway={handleClose}>
-                                            <MenuList autoFocusItem={openLang} id='Lang' onMouseLeave={handleClose} onKeyDown={handleListKeyDown}>
+                                            <MenuList autoFocusItem={openLang} id='Lang' onKeyDown={handleListKeyDown}>
                                                 {lang.dropdowns.map((dropdown, index) => {
                                                     return <MenuItem key={index} id='LangBtn' onClick={handleClick} >{dropdown}</MenuItem>
                                                 })}
@@ -217,7 +215,7 @@ const MainNavBar = () => {
                         aria-controls={openCurr ? 'Curr' : undefined}
                         aria-haspopup="true"
                         onMouseEnter={handleOpen}
-                        // onMouseLeave={handleClose}
+                        onMouseLeave={handleClose}
                         onClick={handleToggle}
                         style={{ height: '20px' }}
                     >
@@ -230,7 +228,7 @@ const MainNavBar = () => {
                                 {...TransitionProps}
                                 style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
                             >
-                                <Paper>
+                                <Paper id='CurrBtn' onMouseOver={handleOpen} onMouseLeave={handleClose}>
                                     <ClickAwayListener onClickAway={handleClose}>
                                         <MenuList autoFocusItem={openCurr} id='Curr' onKeyDown={handleListKeyDown}>
                                             {curr.dropdowns.map((dropdown, index) => {
