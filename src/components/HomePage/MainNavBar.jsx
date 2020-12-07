@@ -152,7 +152,7 @@ const MainNavBar = () => {
                             {city.title}
                             <RiArrowDropDownLine />
                         </Button>
-                        <Popper open={openCity} anchorEl={anchorRefCity.current} onMouseLeave={handleClose} role={undefined} transition disablePortal>
+                        <Popper open={openCity} anchorEl={anchorRefCity.current} role={undefined} transition disablePortal>
                             {({ TransitionProps, placement }) => (
                                 <Grow
                                     {...TransitionProps}
@@ -162,7 +162,7 @@ const MainNavBar = () => {
                                         <ClickAwayListener onClickAway={handleClose}>
                                             <MenuList autoFocusItem={openCity} id='City' onMouseLeave={handleClose} onKeyDown={handleListKeyDown}>
                                                 {city.dropdowns.map((dropdown, index) => {
-                                                    return <MenuItem key={index} id='CityBtn' onClick={handleClick} >{dropdown}</MenuItem>
+                                                    return <MenuItem key={index} id='CityBtn' onClick={handleClick}>{dropdown}</MenuItem>
                                                 })}
                                             </MenuList>
                                         </ClickAwayListener>
@@ -189,7 +189,7 @@ const MainNavBar = () => {
                             {lang.title}
                             <RiArrowDropDownLine />
                         </Button>
-                        <Popper open={openLang} placement='bottom' anchorEl={anchorRefLang.current} onMouseLeave={handleClose} role={undefined} transition disablePortal>
+                        <Popper open={openLang} anchorEl={anchorRefLang.current} role={undefined} transition disablePortal>
                             {({ TransitionProps, placement }) => (
                                 <Grow
                                     {...TransitionProps}
@@ -197,7 +197,7 @@ const MainNavBar = () => {
                                 >
                                     <Paper>
                                         <ClickAwayListener onClickAway={handleClose}>
-                                            <MenuList autoFocusItem={openLang} id='Lang' onKeyDown={handleListKeyDown}>
+                                            <MenuList autoFocusItem={openLang} id='Lang' onMouseLeave={handleClose} onKeyDown={handleListKeyDown}>
                                                 {lang.dropdowns.map((dropdown, index) => {
                                                     return <MenuItem key={index} id='LangBtn' onClick={handleClick} >{dropdown}</MenuItem>
                                                 })}
@@ -224,7 +224,7 @@ const MainNavBar = () => {
                         {curr.title}
                         <RiArrowDropDownLine />
                     </Button>
-                    <Popper open={openCurr} anchorEl={anchorRefCurr.current} onMouseLeave={handleClose} role={undefined} transition disablePortal>
+                    <Popper open={openCurr} anchorEl={anchorRefCurr.current} role={undefined} transition disablePortal>
                         {({ TransitionProps, placement }) => (
                             <Grow
                                 {...TransitionProps}
@@ -234,7 +234,7 @@ const MainNavBar = () => {
                                     <ClickAwayListener onClickAway={handleClose}>
                                         <MenuList autoFocusItem={openCurr} id='Curr' onKeyDown={handleListKeyDown}>
                                             {curr.dropdowns.map((dropdown, index) => {
-                                                return <MenuItem key={index} id='CurrBtn' onClick={handleClick} >{dropdown}</MenuItem>
+                                                return <MenuItem key={index} id='CurrBtn' onClick={handleClick}> {dropdown}</MenuItem>
                                             })}
                                         </MenuList>
                                     </ClickAwayListener>
