@@ -24,6 +24,10 @@
 	font-weight: 700;
 }
 
+.popover {
+	pointer-events: none;
+}
+
 .mainNav {
 	background: rgb(248, 204, 204);
 	display: flex;
