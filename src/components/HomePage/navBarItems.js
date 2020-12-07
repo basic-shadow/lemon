@@ -13,16 +13,36 @@ export const mainBarItems = [
 
 export const mainCompItems = [
     {
+        
+        cName: 'compItems',
+        dropdowns: [
+            'Almaty',
+            'Nur-Sultan',
+            'Aktobe'
+        ],
         title: 'Almaty',
-        cName: 'compItems'
     },
     {
+        
+        cName: 'compItems',
+        dropdowns: [
+            'English',
+            'Kazakh',
+            'Russian',
+            'Half-Kazakh'
+        ],
         title: 'English',
-        cName: 'compItems'
     },
     {
+        
+        cName: 'compItems',
+        dropdowns: [
+            'KZT',
+            'USD',
+            'RUB',
+            'EUR'
+        ],
         title: 'KZT',
-        cName: 'compItems'
     },
 ];
 
@@ -52,5 +72,5 @@ export const catalogNavItems = [
         url: '#',
         cName: 'catalogItems'
     },
-] 
+];
 
