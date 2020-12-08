@@ -1,27 +1,75 @@
 import React, { useState } from 'react';
 import styles from "./SignInPage.module.css";
-import { Paper, Grid, Typography, FormControl } from '@material-ui/core';
-import { FormProvider, useForm } from 'react-hook-form';
-
-import FormInput from './FormInput';
+import { Paper, Grid, Typography, Divider, Button, TextField, CssBaseline } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 
 const SignInPage = () => {
-    const methods = useForm();
+    const [signin, setSignin] = useState({
+        login: "",
+        password: "",
+        error: ""
+    });
+
+
+    const handleSignin = (event) => {
+        event.preventDefault();
+        const valid = validate();
+        console.log(signin);
+    };
+
+    const handleChange = (event) => {
+        event.preventDefault();
+        console.log(event.target.name);
+        setSignin({
+            [event.target.name]: event.target.value
+        });
+    };
+
+    const validate = () => {
+        let error = "";
+
+        if (signin.login) {
+            error = "invalid email";
+            setSignin({
+                ['error']: error
+            });
+            return false;
+        };
+        return true;
+    }
+    console.log(signin);
 
     return (
         <>
+            <CssBaseline />
             <div className={styles.signin}>
                 <Paper className={styles.paper}>
-                    <Typography variant='h4' align='center'>Sign-In</Typography>
-                    <FormProvider {...methods}>
-                        <form >
-                            <Grid container spacing={3} style={{ height: '220px' }}>
-                                <FormInput label="Email or login" name='login' required />
-                                <FormInput label="Password" name='password' required />
-                            </Grid>
-                        </form>
-                    </FormProvider>
+                    <Typography variant='h4' align='center' style={{ marginTop: '10%' }}>Sign-In</Typography>
+                    <Divider />
+                    <form onSubmit={e => handleSignin(e)}
+                        className={styles.form}>
+                        <TextField id="1" label="ASD" name='login' onChange={(e) => handleChange(e)}>
+                            {signin.login}
+                        </TextField>
+
+                        <TextField id="2" label='Password' name='password' onChange={(e) => handleChange(e)}>
+                            {signin.password}
+                        </TextField>
+
+                        <div style={{ color: 'red' }}>
+                            {signin.error}
+                        </div>
+                        <Button variant='outlined' style={{ height: '60%', marginTop: '10%' }} color='secondary'
+                            onClick={e => handleSignin(e)}
+                        >
+                            Sign In
+                        </Button>
+                    </form>
+                    <div style={{ marginBottom: '10%' }}>
+                        <Typography variant='h6' >New to This?  <a href='/signup'>SignUp</a></Typography>
+
+                    </div>
                 </Paper>
             </div >
         </>

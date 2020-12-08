@@ -3,7 +3,7 @@ import styles from './SignInPage.module.css';
 import { TextField, Grid } from '@material-ui/core';
 import { useFormContext, Controller } from 'react-hook-form';
 
-const FormInput = ({ name, label, required }) => {
+const FormInput = ({ name, label, required, type, value }) => {
     const { control } = useFormContext();
 
     return (
@@ -14,7 +14,9 @@ const FormInput = ({ name, label, required }) => {
                 name={name}
                 label={label}
                 required={required}
+                type={type}
                 className={styles.texts}
+                value={value}
             />
         </Grid>
     )

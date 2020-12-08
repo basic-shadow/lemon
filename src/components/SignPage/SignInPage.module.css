@@ -1,24 +1,22 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 .signin {
 	display: flex;
 	justify-content: center;
-	height: 250%;
 }
 
 .paper {
 	display: grid;
-	justify-content: center;
-	width: 40%;
+	padding: 5em 10em;
 }
 
-.texts {
-	background-color: rgba(222, 222, 222, 0.3);
-	width: 100%;
-	margin-top: 10px;
-	border-radius: 10px;
+.clickSignUp:hover {
+	cursor: pointer;
+	color: red;
+}
+
+.form {
+	display: grid;
+	margin-block: 60%;
+	margin-top: 10%;
+	justify-content: space-between;
+	height: 80%;
 }

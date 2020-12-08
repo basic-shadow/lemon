@@ -10,7 +10,7 @@ import { RiArrowDropDownLine, RiYoutubeFill } from 'react-icons/ri';
 
 import { FaTelegram, FaInstagram, FaFacebookF } from 'react-icons/fa';
 
-import { Button, MenuItem, Paper, Grow, ClickAwayListener, MenuList, Popper } from '@material-ui/core';
+import { Button, MenuItem, Paper, Grow, ClickAwayListener, MenuList, Popper, Divider } from '@material-ui/core';
 
 const MainNavBar = () => {
     const [city, setCity] = useState(mainCompItems[0]);
@@ -114,13 +114,13 @@ const MainNavBar = () => {
             event.preventDefault();
             switch (event.currentTarget.id) {
                 case 'CityBtn':
-                    setOpenLang(prevState => prevState = false);
+                    setOpenLang(false);
                     break;
                 case 'LangBtn':
-                    setOpenLang(prevState => prevState = false);
+                    setOpenLang(false);
                     break;
                 case 'CurrBtn':
-                    setOpenLang(prevState => prevState = false);
+                    setOpenLang(false);
                     break;
                 default:
                     console.log('nothing');
@@ -160,7 +160,10 @@ const MainNavBar = () => {
                                         <ClickAwayListener onClickAway={handleClose}>
                                             <MenuList autoFocusItem={openCity} id='City' onKeyDown={handleListKeyDown}>
                                                 {city.dropdowns.map((dropdown, index) => {
-                                                    return <MenuItem key={index} id='CityBtn' onClick={handleClick}>{dropdown}</MenuItem>
+                                                    return (
+                                                        <MenuItem key={index} id='CityBtn' onClick={handleClick}>
+                                                            {dropdown}
+                                                        </MenuItem>)
                                                 })}
                                             </MenuList>
                                         </ClickAwayListener>

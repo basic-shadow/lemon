@@ -17,7 +17,9 @@ const CatalogNavBar = () => {
 
     return (
         <div>
-            <nav className={styles.catalogNav} style={{ visibility: window.location.pathname === '/signin' ? 'hidden' : 'visible' }}>
+            <nav className={styles.catalogNav} style={{
+                visibility: window.location.pathname === '/signin' ? 'hidden' : window.location.pathname === '/signup' ? 'hidden' : 'visible'
+            }}>
                 <img src={lemon} className={styles.lemon} />
                 <ul className={styles.mainNavlinks} style={{ width: '50%' }}>
                     {catalogNavItems.map((item, index) => {
@@ -37,7 +39,7 @@ const CatalogNavBar = () => {
                 </FormControl>
             </nav >
             <p style={{ border: '1px', borderBottom: 'rgb(255, 255, 255)' }} />
-        </div>
+        </div >
     )
 }
 

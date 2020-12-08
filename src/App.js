@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {HomePage, CatalogPage, MainNavBar, CatalogNavBar, SignInPage} from './components';
+import {HomePage, CatalogPage, MainNavBar, CatalogNavBar, SignInPage, SignUpPage} from './components';
 import styles from './App.module.css';
 
 import { fetchData } from './api'
@@ -29,6 +29,7 @@ class App extends React.Component {
                         <Route exact path="/" component={HomePage} />
                         <Route path="/catalog" component={CatalogPage} />
                         <Route path="/signin" component={SignInPage} />
+                        <Route path="/signup" component={SignUpPage} />
                     </Switch>
                 </Router>
             </div>
