@@ -38,10 +38,11 @@ class App extends React.Component {
                         <Route path="/signup" component={SignUpPage} />
                     </Switch>
 
-                    <Footer>
+                    
+                </Router>
+                <Footer>
                         
                     </Footer>
-                </Router>
             </div>
         )
     }
