@@ -1,16 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
-
 import { mainBarItems, mainCompItems } from './navBarItems';
-
 import styles from "./HomePage.module.css";
-
 import { NavLink } from "react-router-dom";
-
 import { RiArrowDropDownLine, RiYoutubeFill } from 'react-icons/ri';
-
 import { FaTelegram, FaInstagram, FaFacebookF } from 'react-icons/fa';
-
 import { Button, MenuItem, Paper, Grow, ClickAwayListener, MenuList, Popper, Divider } from '@material-ui/core';
+
+import { gsap } from 'gsap';
+
 
 const MainNavBar = () => {
     const [city, setCity] = useState(mainCompItems[0]);
@@ -22,6 +19,18 @@ const MainNavBar = () => {
     const anchorRefCity = useRef();
     const anchorRefLang = useRef();
     const anchorRefCurr = useRef();
+
+    let t2 = useRef(null);
+    let t3 = useRef(null);
+
+
+
+    useEffect(() => {
+        const t1 = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+        t1.fromTo(t3, { opacity: 0 }, { opacity: 1, duration: 1, delay: 1 }, 'first');
+        t1.fromTo(t2, { x: '-150%' }, { x: '0%', duration: 2, delay: 1 }, 'first');
+    }, []);
 
 
     const handleToggle = (event) => {
@@ -42,6 +51,7 @@ const MainNavBar = () => {
         }
 
     };
+
 
     const handleClose = (event) => {
 
@@ -130,145 +140,155 @@ const MainNavBar = () => {
     }
 
     return (
-        <nav className={styles.mainNav}>
-            <a href="/" className={styles.logo}>
-                Lemon.isla
-            </a>
-            <div style={{ display: 'flex', justifyContent: 'space-around', width: '22%', position: 'relative', right: '7%' }}>
-                {city ?
-                    <div >
-                        <Button
-                            id='CityBtn'
-                            ref={anchorRefCity}
-                            aria-controls={openCity ? 'City' : undefined}
-                            aria-haspopup="true"
-                            onMouseEnter={handleOpen}
-                            onMouseLeave={handleClose}
-                            onClick={handleToggle}
-                            style={{ height: '20px' }}
-                        >
-                            {city.title}
-                            <RiArrowDropDownLine />
-                        </Button>
-                        <Popper open={openCity} anchorEl={anchorRefCity.current} role={undefined} transition disablePortal>
-                            {({ TransitionProps, placement }) => (
-                                <Grow
-                                    {...TransitionProps}
-                                    style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-                                >
-                                    <Paper id='CityBtn' onMouseOver={handleOpen} onMouseLeave={handleClose}>
-                                        <ClickAwayListener onClickAway={handleClose}>
-                                            <MenuList autoFocusItem={openCity} id='City' onKeyDown={handleListKeyDown}>
-                                                {city.dropdowns.map((dropdown, index) => {
-                                                    return (
-                                                        <MenuItem key={index} id='CityBtn' onClick={handleClick}>
-                                                            {dropdown}
-                                                        </MenuItem>)
-                                                })}
-                                            </MenuList>
-                                        </ClickAwayListener>
-                                    </Paper>
-                                </Grow>
-                            )}
-                        </Popper>
-                    </div>
-                    : null}
-
-
-                {
-                    lang ? <div>
-                        <Button
-                            ref={anchorRefLang}
-                            id='LangBtn'
-                            aria-controls={openLang ? 'Lang' : undefined}
-                            aria-haspopup="true"
-                            onMouseEnter={handleOpen}
-                            onMouseLeave={handleClose}
-                            onClick={handleToggle}
-                            style={{ height: '20px' }}
-                        >
-                            {lang.title}
-                            <RiArrowDropDownLine />
-                        </Button>
-                        <Popper open={openLang} anchorEl={anchorRefLang.current} role={undefined} transition disablePortal>
-                            {({ TransitionProps, placement }) => (
-                                <Grow
-                                    {...TransitionProps}
-                                    style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-                                >
-                                    <Paper id='LangBtn' onMouseOver={handleOpen} onMouseLeave={handleClose}>
-                                        <ClickAwayListener onClickAway={handleClose}>
-                                            <MenuList autoFocusItem={openLang} id='Lang' onKeyDown={handleListKeyDown}>
-                                                {lang.dropdowns.map((dropdown, index) => {
-                                                    return <MenuItem key={index} id='LangBtn' onClick={handleClick} >{dropdown}</MenuItem>
-                                                })}
-                                            </MenuList>
-                                        </ClickAwayListener>
-                                    </Paper>
-                                </Grow>
-                            )}
-                        </Popper>
-                    </div> : null
-                }
-
-                {curr ? <div>
-                    <Button
-                        ref={anchorRefCurr}
-                        id='CurrBtn'
-                        aria-controls={openCurr ? 'Curr' : undefined}
-                        aria-haspopup="true"
-                        onMouseEnter={handleOpen}
-                        onMouseLeave={handleClose}
-                        onClick={handleToggle}
-                        style={{ height: '20px' }}
+        <div>
+            <nav className={styles.navBackground} ref={el => t3 = el}>
+                <div className={styles.mainNav}>
+                    <a href="/" id="logo" className={styles.logo} ref={el => t2 = el}>
+                        Lemon.isla
+                </a>
+                    <div style={{ display: 'flex', justifyContent: 'space-around', width: '18%' }}
                     >
-                        {curr.title}
-                        <RiArrowDropDownLine />
-                    </Button>
-                    <Popper open={openCurr} anchorEl={anchorRefCurr.current} role={undefined} transition disablePortal>
-                        {({ TransitionProps, placement }) => (
-                            <Grow
-                                {...TransitionProps}
-                                style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+                        {city ?
+                            <div >
+
+                                <Button
+                                    id='CityBtn'
+                                    ref={anchorRefCity}
+                                    aria-controls={openCity ? 'City' : undefined}
+                                    aria-haspopup="true"
+                                    onMouseEnter={handleOpen}
+                                    onMouseLeave={handleClose}
+                                    onClick={handleToggle}
+                                    style={{ color: '#fff', fontSize: '0.8em' }}
+                                >
+                                    {city.title}
+                                    <RiArrowDropDownLine />
+                                </Button>
+                                <Popper open={openCity} anchorEl={anchorRefCity.current} role={undefined} transition disablePortal>
+                                    {({ TransitionProps, placement }) => (
+                                        <Grow
+                                            {...TransitionProps}
+                                            style={{
+                                                transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom',
+
+                                            }}
+                                        >
+                                            <Paper id='CityBtn' onMouseOver={handleOpen} onMouseLeave={handleClose}>
+                                                <ClickAwayListener onClickAway={handleClose}>
+                                                    <MenuList autoFocusItem={openCity}
+                                                        id='City' onKeyDown={handleListKeyDown}>
+                                                        {city.dropdowns.map((dropdown, index) => {
+                                                            return (
+                                                                <MenuItem key={index} id='CityBtn' onClick={handleClick}>
+                                                                    {dropdown}
+                                                                </MenuItem>)
+                                                        })}
+                                                    </MenuList>
+                                                </ClickAwayListener>
+                                            </Paper>
+                                        </Grow>
+                                    )}
+                                </Popper>
+                            </div>
+                            : null}
+
+
+                        {
+                            lang ? <div>
+                                <Button
+                                    ref={anchorRefLang}
+                                    id='LangBtn'
+                                    aria-controls={openLang ? 'Lang' : undefined}
+                                    aria-haspopup="true"
+                                    onMouseEnter={handleOpen}
+                                    onMouseLeave={handleClose}
+                                    onClick={handleToggle}
+                                    style={{ color: '#fff', fontSize: '0.8em' }}
+                                >
+                                    {lang.title}
+                                    <RiArrowDropDownLine />
+                                </Button>
+                                <Popper open={openLang} anchorEl={anchorRefLang.current} role={undefined} transition disablePortal>
+                                    {({ TransitionProps, placement }) => (
+                                        <Grow
+                                            {...TransitionProps}
+                                            style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+                                        >
+                                            <Paper id='LangBtn' onMouseOver={handleOpen} onMouseLeave={handleClose}>
+                                                <ClickAwayListener onClickAway={handleClose}>
+                                                    <MenuList autoFocusItem={openLang} id='Lang' onKeyDown={handleListKeyDown}>
+                                                        {lang.dropdowns.map((dropdown, index) => {
+                                                            return <MenuItem key={index} id='LangBtn' onClick={handleClick} >{dropdown}</MenuItem>
+                                                        })}
+                                                    </MenuList>
+                                                </ClickAwayListener>
+                                            </Paper>
+                                        </Grow>
+                                    )}
+                                </Popper>
+                            </div> : null
+                        }
+
+                        {curr ? <div>
+                            <Button
+                                style={{ color: '#fff', fontSize: '0.8em' }}
+                                ref={anchorRefCurr}
+                                id='CurrBtn'
+                                aria-controls={openCurr ? 'Curr' : undefined}
+                                aria-haspopup="true"
+                                onMouseEnter={handleOpen}
+                                onMouseLeave={handleClose}
+                                onClick={handleToggle}
                             >
-                                <Paper id='CurrBtn' onMouseOver={handleOpen} onMouseLeave={handleClose}>
-                                    <ClickAwayListener onClickAway={handleClose}>
-                                        <MenuList autoFocusItem={openCurr} id='Curr' onKeyDown={handleListKeyDown}>
-                                            {curr.dropdowns.map((dropdown, index) => {
-                                                return <MenuItem key={index} id='CurrBtn' onClick={handleClick}> {dropdown}</MenuItem>
-                                            })}
-                                        </MenuList>
-                                    </ClickAwayListener>
-                                </Paper>
-                            </Grow>
-                        )}
-                    </Popper>
-                </div> : null}
-            </div>
+                                {curr.title}
+                                <RiArrowDropDownLine />
+                            </Button>
+                            <Popper open={openCurr} anchorEl={anchorRefCurr.current} role={undefined} transition disablePortal>
+                                {({ TransitionProps, placement }) => (
+                                    <Grow
+                                        {...TransitionProps}
+                                        style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+                                    >
+                                        <Paper id='CurrBtn' onMouseOver={handleOpen} onMouseLeave={handleClose}>
+                                            <ClickAwayListener onClickAway={handleClose}>
+                                                <MenuList autoFocusItem={openCurr} id='Curr' onKeyDown={handleListKeyDown}>
+                                                    {curr.dropdowns.map((dropdown, index) => {
+                                                        return <MenuItem key={index} id='CurrBtn' onClick={handleClick}> {dropdown}</MenuItem>
+                                                    })}
+                                                </MenuList>
+                                            </ClickAwayListener>
+                                        </Paper>
+                                    </Grow>
+                                )}
+                            </Popper>
+                        </div> : null}
+                    </div>
 
 
-            < ul className={styles.mainNavlinks} style={{ position: 'relative', left: '12%' }}  >
-                {mainBarItems.map((item, index) => {
-                    return (
-                        <li key={index}>
-                            <NavLink to={item.url} className={styles.mainBarItems} >
-                                {item.title}
-                            </NavLink>
-                        </li>
-                    )
-                })}
-            </ul>
-            <Button className={styles.btn}
-                href='/signin' color='secondary' variant="outlined" size="small" disableElevation>
-                Sign In
-            </Button>
-            <ul style={{ display: 'flex', position: 'relative', justifyContent: 'space-around', width: '12%', left: '3%' }}>
-                <FaTelegram />
-                <FaInstagram />
-                <FaFacebookF />
-                <RiYoutubeFill />
-            </ul>
-        </nav >
+                    < ul className={styles.mainNavlinks} style={{ position: 'relative', left: '12%' }}  >
+                        {mainBarItems.map((item, index) => {
+                            return (
+                                <li key={index}>
+                                    <NavLink to={item.url} className={styles.mainNavItems} >
+                                        {item.title}
+                                    </NavLink>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                    <Button className={styles.btn}
+                        href='/signin' color='secondary' variant="outlined" size="small" disableElevation>
+                        Sign In
+                </Button>
+                    <ul style={{ display: 'flex', justifyContent: 'space-around', width: '8%' }}>
+                        <FaTelegram />
+                        <FaInstagram />
+                        <FaFacebookF />
+                        <RiYoutubeFill />
+                    </ul>
+                </div>
+            </nav >
+        </div>
     )
 }
 

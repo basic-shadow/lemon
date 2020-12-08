@@ -57,10 +57,10 @@ const SignUpPage = () => {
                         <TextField label="Login" name="login">
 
                         </TextField>
-                        <TextField label="Password" name="password" helperText="Passwords must be at least 6 characters">
+                        <TextField type="password" label="Password" name="password" helperText="Passwords must be at least 6 characters">
 
                         </TextField>
-                        <TextField label="Re-enter password" name="re_password">
+                        <TextField type="password" label="Re-enter password" name="re_password">
 
                         </TextField>
                         <Button variant='outlined' style={{ marginTop: '20%' }}>

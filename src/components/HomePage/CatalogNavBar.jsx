@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 
 import { BsSearch } from 'react-icons/bs';
 
-import { FormControl, TextField } from '@material-ui/core'
+import { Divider, FormControl, TextField } from '@material-ui/core'
 
 import lemon from '../../images/lemon.png';
 
@@ -38,7 +38,7 @@ const CatalogNavBar = () => {
                         style={{ position: 'relative', right: '8%' }} />
                 </FormControl>
             </nav >
-            <p style={{ border: '1px', borderBottom: 'rgb(255, 255, 255)' }} />
+            <Divider />
         </div >
     )
 }

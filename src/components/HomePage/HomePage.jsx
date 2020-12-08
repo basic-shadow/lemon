@@ -1,33 +1,33 @@
 import React from "react";
-
-import { Card, CardContent, Typography, Grid, Button, CardActionArea } from "@material-ui/core";
+import { Card, CardContent, Typography, Grid, CardActionArea } from "@material-ui/core";
 
 import styles from "./HomePage.module.css";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import men from '../../images/men.jpg';
+import women from '../../images/women.jpg';
+import kids from '../../images/kids.jpg';
 
 const HomePage = () => {
-    const obj = ['Men', 'Women', 'Kids'];
+    const obj = { 'Men': men, 'Women': women, 'Kids': kids };
 
     const renderItems = () => {
-        return Object.keys(obj).map((index) => {
+        return Object.keys(obj).map((item, index) => {
             return (
-                <Card className={styles.card} key={index}>
+                <Card className={styles.card} key={index} >
                     <CardActionArea>
                         <CardContent>
-                            <Typography>{obj[index]}</Typography>
+                            <img src={obj[item]} className={styles.menImg} />
+                            <Typography align='center' style={{
+                                fontSize: '2em', marginTop: '4%'
+                            }}>{item}</Typography>
+                            <div style={{ display: 'grid', width: '10%', background: '#fff' }}>
+                                <Typography style={{ position: 'absolute', top: '50%', left: '50%' }}>Shop</Typography>
+                            </div>
                         </CardContent>
                     </CardActionArea>
                 </Card >)
         });
     }
 
-
-
-    const navCatalog = () => {
-        return (
-            <h1>menu</h1>
-        )
-    }
 
     return (
         <Grid container justify="center">

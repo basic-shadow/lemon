@@ -49,11 +49,11 @@ const SignInPage = () => {
                     <Divider />
                     <form onSubmit={e => handleSignin(e)}
                         className={styles.form}>
-                        <TextField id="1" label="ASD" name='login' onChange={(e) => handleChange(e)}>
+                        <TextField label="Login" name='login' onChange={(e) => handleChange(e)}>
                             {signin.login}
                         </TextField>
 
-                        <TextField id="2" label='Password' name='password' onChange={(e) => handleChange(e)}>
+                        <TextField type="password" label='Password' name='password' onChange={(e) => handleChange(e)}>
                             {signin.password}
                         </TextField>
 
