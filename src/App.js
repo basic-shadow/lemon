@@ -1,14 +1,8 @@
 import React from 'react';
-
 import {HomePage, CatalogPage, MainNavBar, CatalogNavBar, SignInPage, SignUpPage, Footer} from './components';
 import styles from './App.module.css';
-
-import { fetchData } from './api'
-import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { gsap } from 'gsap';
-
-
 
 class App extends React.Component {
     constructor(props) {
@@ -37,12 +31,9 @@ class App extends React.Component {
                         <Route path="/signin" component={SignInPage} />
                         <Route path="/signup" component={SignUpPage} />
                     </Switch>
-
-                    
                 </Router>
-                <Footer>
-                        
-                    </Footer>
+                <Footer>       
+                </Footer>
             </div>
         )
     }

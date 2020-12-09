@@ -1,24 +1,111 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 .footerBG {
-	background: rgb(50, 50, 50);
-	position: fixed;
+	/* position: relative; */
+	position: absolute;
 	top: 100%;
 	left: 0%;
 	width: 100%;
-	height: 20%;
+	height: 50vh;
+	background: rgb(50, 50, 50);
 	background: linear-gradient(45deg, rgb(15, 15, 25), rgb(65, 65, 85));
 }
 
-.curvedline {
-	width: 120%;
-	height: 100%;
-	position: absolute;
-	bottom: -25;
-	border-radius: 20%;
-	transform: scaleX(2) scaleY(1);
+.logo {
+	color: #fff;
+	font-size: 2.5em;
+	font-weight: 700;
+	font-family: "Lobster", cursive;
+}
+
+.lemonul {
+	justify-content: space-around;
+	list-style: none;
+	font-size: 0.7em;
+}
+
+.lemonul * {
+	margin-top: 3%;
+}
+
+.lemonul:hover {
+	cursor: pointer;
+}
+
+.lemonli:hover {
+	text-decoration: underline;
+	color: grey;
+	opacity: 0.8;
+}
+
+a {
+	color: white;
+}
+
+.lowfooter {
+	display: flex;
+	align-items: center;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(to right, rgb(15, 15, 19), rgb(42, 42, 61));
+	height: 8vh;
+
+	font-size: 0.7rem;
+}
+
+.grid {
+	display: grid;
+	grid-template-rows: 15vh 18vh 9vh;
+	grid-template-columns: 5% repeat(5, minmax(10em, 18%)) 5%;
+	transform: translate(2%, 4%);
+}
+
+.subheader {
+	font-size: 1.1em !important;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif !important;
+}
+
+.lemonisla {
+	grid-column: 6;
+	grid-row: 2;
+	text-align: center;
+	align-self: flex-start;
+	transform: translate(2%, -13%);
+}
+
+.contacts {
+	grid-column: 5;
+	grid-row: 2;
+	align-self: flex-start;
+	text-align: left;
+	font-size: 1em;
+	color: white;
+}
+
+.paymentmethods {
+	grid-column: 4;
+	grid-row: 2;
+	align-self: flex-start;
+	text-align: left;
+	color: white;
+}
+
+.applications {
+	grid-column: 3;
+	grid-row: 2;
+	align-self: flex-start;
+	text-align: left;
+	color: white;
+}
+
+.basicinfo {
+	grid-column: 2;
+	grid-row: 2;
+	align-self: flex-start;
+	text-align: left;
+	color: white;
+}
+
+.appshover:hover {
+	color: grey;
+	text-decoration: underline;
 }

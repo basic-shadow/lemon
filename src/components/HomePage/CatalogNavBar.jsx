@@ -38,7 +38,7 @@ const CatalogNavBar = () => {
                         style={{ position: 'relative', right: '8%' }} />
                 </FormControl>
             </nav >
-            <Divider />
+            <Divider style={{ height: '0.3em', backgroundColor: 'black', opacity: 0.3 }} />
         </div >
     )
 }
