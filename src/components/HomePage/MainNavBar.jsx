@@ -139,7 +139,7 @@ const MainNavBar = () => {
     }
 
     return (
-        <div>
+        <div style={{ position: 'sticky' }}>
             <nav className={styles.navBackground} ref={el => t3 = el}>
                 <div className={styles.mainNav}>
 
