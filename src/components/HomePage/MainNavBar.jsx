@@ -27,8 +27,8 @@ const MainNavBar = () => {
     useEffect(() => {
         const t1 = gsap.timeline({ defaults: { ease: "power1.out" } });
 
-        t1.fromTo(t3, { opacity: 0 }, { opacity: 1, duration: 1, delay: 1 }, 'first');
-        t1.fromTo(t2, { x: '-150%' }, { x: '0%', duration: 2, delay: 1 }, 'first');
+        t1.fromTo(t3, { opacity: 0 }, { opacity: 1, duration: 1 }, 4);
+        t1.fromTo(t2, { x: '-100%' }, { x: '0%', duration: 2 }, 4);
     }, []);
 
 
