@@ -115,6 +115,69 @@
 
 .anotherpage {
 	display: flex;
+	flex-direction: column;
+	position: relative;
+	height: 140vh;
+	width: 100%;
+	color: #fff;
+}
 
+.emailsend {
+	display: flex;
+	width: 100%;
 	justify-content: center;
+	align-items: center;
+	margin-left: 10%;
+}
+.pagecontent {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	top: 0%;
+	left: 0%;
+	height: 50vh;
+	background: rgb(200, 222, 222);
+	margin-top: -1%;
+	justify-content: center;
+	align-items: center;
+}
+
+.enterEmail {
+	font-family: "Roboto", sans-serif;
+	margin-top: 1em;
+	color: #333;
+	font-size: 1.2rem;
+	padding: 1.2rem 1.5rem;
+	border-radius: 0.3rem;
+	background: white;
+	border: none;
+	width: 30%;
+}
+
+.emailButton {
+	width: 4%;
+	height: 78%;
+	transform: translate(-251%, 15%);
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.enterEmail:focus {
+	border: 2px solid;
+	box-shadow: 0.2em 0.2em 1.5em 0.3em rgb(68, 102, 102);
+}
+
+.labelEmail {
+	font-family: "Roboto", sans-serif;
+	font-size: 1.2rem;
+	margin-top: 0.7rem;
+	color: black;
+	font-weight: 600;
+	transition: all 0.3s;
+	transform: translate(-20rem, -4.4rem);
+}
+
+.enterEmail:placeholder-shown + .labelEmail {
+	opacity: 0;
+	transform: translate(-20rem, 0);
 }
