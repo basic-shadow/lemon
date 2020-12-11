@@ -120,20 +120,16 @@
 	height: 25vh;
 	justify-content: center;
 	align-items: center;
-	background-color: rgb(114, 212, 199);
+	background-color: rgb(169, 224, 218);
 }
 
 .secondpageCont {
 	display: flex;
 	position: absolute;
-	top: 31%;
+	top: 24.2%;
 	width: 100%;
 	height: 35vh;
 	left: 12%;
-}
-
-.secondpageCont ul:hover > *:not(:hover):not(button) {
-	opacity: 0.5;
 }
 
 .slides {
@@ -172,22 +168,48 @@
 	display: inline-block;
 	line-height: 1em;
 	font-size: 5rem;
-	margin-top: 7.9%;
+	margin-top: 7.7%;
 	margin-left: 3%;
 	position: absolute;
-	background: linear-gradient(to bottom, black 50%, white 50%);
+	background: linear-gradient(to bottom, rgb(22, 77, 77) 60%, white 40%);
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
-.thirdPage {
+.thirdpage {
+	display: flex;
+	align-items: center;
+	position: relative;
+	top: 50vh;
+	width: 100%;
+	justify-content: center;
+	text-transform: uppercase;
 }
 
+.thirdpageHeaders {
+	display: flex;
+	font-size: 3rem;
+	justify-content: space-around;
+}
+
+.thirdpageHeaders h1 {
+	color: rgb(28, 173, 179);
+	position: absolute;
+	width: 10%;
+	left: 5%;
+}
+
+.thirdpageHeaders h2 {
+	transform: translate(-30%, 23%);
+}
+
+.thirdpagebox {
+}
 .prelastpage {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
-	top: 55%;
+	top: 62%;
 	height: 140vh;
 	width: 100%;
 	color: #fff;

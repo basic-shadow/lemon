@@ -13,6 +13,8 @@ import makeCarousel from 'react-reveal/makeCarousel';
 import Slide from 'react-reveal/Slide';
 import styled, { css } from 'styled-components';
 import Zoom from 'react-reveal/Zoom';
+import card1 from '../../images/card1.jpeg';
+import card2 from '../../images/card2.jpeg';
 
 
 const HomePage = () => {
@@ -28,7 +30,7 @@ const HomePage = () => {
 
     const Arrow = styled.div`
     line-height: 150px;
-    z-index: 100;
+    z-index: 1000;
     text-align: center;
     position: absolute;
     top: 25%;
@@ -39,7 +41,7 @@ const HomePage = () => {
     border-radius: 50%;
     color: white;
     &:hover {
-        background: linear-gradient(225deg, rgb(79, 231, 150), rgb(114, 212, 199));
+        background: linear-gradient(225deg, rgb(150, 204, 198), rgb(169, 224, 218));
     }
 
     ${props => props.right ? css`left: 90%;` : css`left: 0%;`}
@@ -102,7 +104,7 @@ const HomePage = () => {
 
             <Divider style={{ backgroundColor: 'black', opacity: 0.3 }} />
             <div style={{ display: 'grid', gridTemplateRows: '20vh' }}>
-                <label className={styles.popularcatalog}>Popular Catalog</label>
+                <label className={styles.popularcatalog}>Relevant This Season</label>
             </div>
             <div className={styles.secondpage}>
             </div>
@@ -148,9 +150,33 @@ const HomePage = () => {
                 </Carousel>
             </div>
 
-            <div className={styles.thirdPage}>
-                <div>
+            <div className={styles.thirdpage}>
+                <div >
+                    <div className={styles.thirdpageHeaders}>
+                        <h1>Popular</h1>
+                        <h2>Catalog</h2>
+                    </div>
+                    <div className={styles.thirdpagebox}>
+                        <div className={styles.box}>
+                            <div className={styles.imgBox}>
+                                <img src={card1} />
+                            </div>
+                            <div className={styles.contentBox}>
+                                <h2>Image Caption</h2>
+                                <p>Some text is written here</p>
+                            </div>
+                        </div>
 
+                        <div className={styles.box}>
+                            <div className={styles.imgBox}>
+                                <img src={card1} />
+                            </div>
+                            <div className={styles.contentBox}>
+                                <h2>Image Caption</h2>
+                                <p>Some text is written here</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
