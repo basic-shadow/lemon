@@ -139,14 +139,13 @@
 .slides {
 	display: flex;
 	height: 32vh;
-	border: 1px solid green;
 	justify-content: center;
 }
 
 .eachslide {
 	display: flex;
 	flex-direction: column;
-	width: 30%;
+	width: 27%;
 	justify-content: space-around;
 	cursor: pointer;
 }
@@ -179,6 +178,9 @@
 	background: linear-gradient(to bottom, black 50%, white 50%);
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.thirdPage {
 }
 
 .prelastpage {

@@ -6,21 +6,20 @@ import styles from "./HomePage.module.css";
 import men from '../../images/men.jpg';
 import women from '../../images/women.jpg';
 import kids from '../../images/kids.jpg';
-import { GrCaretNext, GrCaretPrevious } from 'react-icons/gr';
+import { GrCaretNext, GrCaretPrevious, GrWifiNone } from 'react-icons/gr';
 import { gsap } from 'gsap';
 import img1 from '../../images/img1.jpeg';
 import makeCarousel from 'react-reveal/makeCarousel';
 import Slide from 'react-reveal/Slide';
 import styled, { css } from 'styled-components';
-
+import Zoom from 'react-reveal/Zoom';
 
 
 const HomePage = () => {
     const obj = { 'Men': men, 'Women': women, 'Kids': kids };
-    const settings = { dots: true, infinite: true, speed: 500, slidesToShow: 2, slidesToScroll: 1 };
 
     const Container = styled.div`
-    // border: 1px solid red;
+
     position: relative;
     overflow: hidden;
     width: 75%;
@@ -28,22 +27,36 @@ const HomePage = () => {
     `;
 
     const Arrow = styled.div`
+    line-height: 150px;
     z-index: 100;
-    line-height: 200px;
     text-align: center;
     position: absolute;
-    top: 0;
+    top: 25%;
     width: 10%;
-    font-size: 3em;
+    font-size: 3rem;
     cursor: pointer;
     user-select: none;
+    border-radius: 50%;
+    color: white;
+    &:hover {
+        background: linear-gradient(225deg, rgb(79, 231, 150), rgb(114, 212, 199));
+    }
+
     ${props => props.right ? css`left: 90%;` : css`left: 0%;`}
+
     `;
+
     const CarouselUI = ({ position, handleClick, children }) => (
         <Container>
-            <Arrow onClick={handleClick} data-position={position - 1}><GrCaretPrevious /></Arrow>
+
+            <Arrow onClick={handleClick} data-position={position - 1}>
+
+                <GrCaretPrevious style={{ transform: 'translate(-12%, 20%)' }} />
+            </Arrow>
             {children}
-            <Arrow right onClick={handleClick} data-position={position + 1}><GrCaretNext /></Arrow>
+            <Arrow right onClick={handleClick} data-position={position + 1}><GrCaretNext style={{
+                transform: 'translate(12%, 20%)'
+            }} /></Arrow>
         </Container>
     );
     const Carousel = makeCarousel(CarouselUI);
@@ -97,38 +110,49 @@ const HomePage = () => {
             <div className={styles.secondpageCont}>
                 <Carousel defaultWait='none'>
                     <Slide right>
-                        <div className={styles.slides}>
-                            <div className={styles.eachslide}>
-                                <img src={img1} />
-                                <p>Slide Description</p>
+                        <Zoom >
+                            <div className={styles.slides}>
+                                <div className={styles.eachslide}>
+                                    <img src={img1} />
+                                    <p>I</p>
+                                </div>
+                                <div className={styles.eachslide}>
+                                    <img src={img1} />
+                                    <p>AM</p>
+                                </div>
+                                <div className={styles.eachslide}>
+                                    <img src={img1} />
+                                    <p>GROOT</p>
+                                </div>
                             </div>
-                            <div className={styles.eachslide}>
-                                <img src={img1} />
-                                <p>Slide Description</p>
-                            </div>
-                            <div className={styles.eachslide}>
-                                <img src={img1} />
-                                <p>Slide Description</p>
-                            </div>
-                        </div>
+                        </Zoom>
                     </Slide>
                     <Slide right>
-                        <div className={styles.slides}>
-                            <div className={styles.eachslide}>
-                                <img src={img1} />
-                                <p>Slide Description</p>
+                        <Zoom >
+                            <div className={styles.slides}>
+                                <div className={styles.eachslide}>
+                                    <img src={img1} />
+                                    <p>I</p>
+                                </div>
+                                <div className={styles.eachslide}>
+                                    <img src={img1} />
+                                    <p>AM</p>
+                                </div>
+                                <div className={styles.eachslide}>
+                                    <img src={img1} />
+                                    <p>isla</p>
+                                </div>
                             </div>
-                            <div className={styles.eachslide}>
-                                <img src={img1} />
-                                <p>Slide Description</p>
-                            </div>
-                            <div className={styles.eachslide}>
-                                <img src={img1} />
-                                <p>Slide Description</p>
-                            </div>
-                        </div>
+                        </Zoom>
                     </Slide>
                 </Carousel>
+            </div>
+
+            <div className={styles.thirdPage}>
+                <div>
+
+                </div>
+
             </div>
 
 
