@@ -9,12 +9,44 @@ import kids from '../../images/kids.jpg';
 import { GrCaretNext, GrCaretPrevious } from 'react-icons/gr';
 import { gsap } from 'gsap';
 import img1 from '../../images/img1.jpeg';
-import Slider from 'react-slick';
+import makeCarousel from 'react-reveal/makeCarousel';
+import Slide from 'react-reveal/Slide';
+import styled, { css } from 'styled-components';
+
 
 
 const HomePage = () => {
     const obj = { 'Men': men, 'Women': women, 'Kids': kids };
     const settings = { dots: true, infinite: true, speed: 500, slidesToShow: 2, slidesToScroll: 1 };
+
+    const Container = styled.div`
+    // border: 1px solid red;
+    position: relative;
+    overflow: hidden;
+    width: 75%;
+    height: 95%;
+    `;
+
+    const Arrow = styled.div`
+    z-index: 100;
+    line-height: 200px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    width: 10%;
+    font-size: 3em;
+    cursor: pointer;
+    user-select: none;
+    ${props => props.right ? css`left: 90%;` : css`left: 0%;`}
+    `;
+    const CarouselUI = ({ position, handleClick, children }) => (
+        <Container>
+            <Arrow onClick={handleClick} data-position={position - 1}><GrCaretPrevious /></Arrow>
+            {children}
+            <Arrow right onClick={handleClick} data-position={position + 1}><GrCaretNext /></Arrow>
+        </Container>
+    );
+    const Carousel = makeCarousel(CarouselUI);
 
 
     const renderItems = () => {
@@ -52,8 +84,6 @@ const HomePage = () => {
                     justifyContent: 'space-between', width: '80%', height: '62vh'
                 }}>
                     {renderItems()}
-
-
                 </Grid>
             </div >
 
@@ -65,46 +95,40 @@ const HomePage = () => {
             </div>
 
             <div className={styles.secondpageCont}>
-                {/* <button style={{ background: 'rgba(0,0,0,0)', border: 'none', cursor: 'pointer' }}><GrCaretPrevious style={{
-                    fontSize: '2rem'
-                }} /></button>
-                <div className={styles.secondpageContbox}>
-                    <ul >
-                        <li>
-                            <img src={img1} />
-                            <label >Label 1</label></li>
-                        <li>
-                            <img src={img1} />
-                            <label >Label 2</label></li>
-                        <li>
-                            <img src={img1} />
-                            <label >Label 3</label></li>
-                    </ul>
-                </div>
-                <button style={{ background: 'rgba(0,0,0,0)', border: 'none', cursor: 'pointer' }}><GrCaretNext style={{ fontSize: '2rem' }} /></button> */}
-
-                <Slider {...settings} >
-                    <div className={styles.slides}>
-                        <img src={img1} />
-                        <label >Label 1</label>
-                    </div>
-                    <div className={styles.slides}>
-                        <img src={img1} />
-                        <label >Label 2</label>
-                    </div >
-                    <div className={styles.slides}>
-                        <img src={img1} />
-                        <label >Label 3</label>
-                    </div>
-                    <div className={styles.slides}>
-                        <img src={img1} />
-                        <label >Label 4</label>
-                    </div>
-                    <div className={styles.slides}>
-                        <img src={img1} />
-                        <label >Label 5</label>
-                    </div>
-                </Slider>
+                <Carousel defaultWait='none'>
+                    <Slide right>
+                        <div className={styles.slides}>
+                            <div className={styles.eachslide}>
+                                <img src={img1} />
+                                <p>Slide Description</p>
+                            </div>
+                            <div className={styles.eachslide}>
+                                <img src={img1} />
+                                <p>Slide Description</p>
+                            </div>
+                            <div className={styles.eachslide}>
+                                <img src={img1} />
+                                <p>Slide Description</p>
+                            </div>
+                        </div>
+                    </Slide>
+                    <Slide right>
+                        <div className={styles.slides}>
+                            <div className={styles.eachslide}>
+                                <img src={img1} />
+                                <p>Slide Description</p>
+                            </div>
+                            <div className={styles.eachslide}>
+                                <img src={img1} />
+                                <p>Slide Description</p>
+                            </div>
+                            <div className={styles.eachslide}>
+                                <img src={img1} />
+                                <p>Slide Description</p>
+                            </div>
+                        </div>
+                    </Slide>
+                </Carousel>
             </div>
 
 
