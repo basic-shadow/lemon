@@ -92,7 +92,7 @@ const HomePage = () => {
             </div >
 
             <div className={styles.secondpage}>
-                <div style={{ position: 'relative', background: 'rgb(35, 34, 138)', height: '35%', width: '100%' }}>
+                <div style={{ position: 'relative', background: 'rgb(28, 28, 71)', height: '35%', width: '100%' }}>
                 </div>
                 <div className={styles.secondpageCont}>
                     <div style={{ marginTop: '2%', marginBottom: '2%', display: 'flex', fontSize: '2.2rem' }}>
@@ -181,7 +181,13 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
-                <div className={styles.area} >
+                <div className={styles.area1} >
+                </div >
+                <div className={styles.area2} >
+                </div >
+                <div className={styles.area3} >
+                </div >
+                <div className={styles.area4} >
                 </div >
             </div>
 
