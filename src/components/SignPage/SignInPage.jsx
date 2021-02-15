@@ -41,7 +41,7 @@ const SignInPage = () => {
     console.log(signin);
 
     return (
-        <>
+        <div>
             <CssBaseline />
             <div className={styles.signin}>
                 <Paper className={styles.paper}>
@@ -60,7 +60,7 @@ const SignInPage = () => {
                         <div style={{ color: 'red' }}>
                             {signin.error}
                         </div>
-                        <Button variant='outlined' style={{ height: '60%', marginTop: '10%' }} color='secondary'
+                        <Button variant="contained" style={{ height: '12%' }} color='secondary'
                             onClick={e => handleSignin(e)}
                         >
                             Sign In
@@ -68,11 +68,10 @@ const SignInPage = () => {
                     </form>
                     <div style={{ marginBottom: '10%' }}>
                         <Typography variant='h6' >New to This?  <a href='/signup'>SignUp</a></Typography>
-
                     </div>
                 </Paper>
             </div >
-        </>
+        </div>
     )
 }
 

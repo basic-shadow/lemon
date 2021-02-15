@@ -20,7 +20,7 @@ const CatalogNavBar = () => {
                 visibility: window.location.pathname === '/signin' ? 'hidden' : window.location.pathname === '/signup' ? 'hidden' : 'visible'
             }}>
 
-                <a href='/' style={{ cursor: 'pointer' }}>
+                <a href='/lemon' style={{ cursor: 'pointer' }}>
                     <svg
                         width="192" height="52" viewBox="0 0 192 52" fill="none" xmlns="http://www.w3.org/2000/svg" >
                         <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.270004" y="0.700012" width="191" height="51" fill="black">

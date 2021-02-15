@@ -49,12 +49,12 @@ export const mainCompItems = [
 export const catalogNavItems = [
     {
         title: 'Home',
-        url: '/',
+        url: '/lemon',
         cName: 'catalogItems'
     },
     {
         title: 'Catalog',
-        url: '#',
+        url: '/catalog',
         cName: 'catalogItems'
     },
     {

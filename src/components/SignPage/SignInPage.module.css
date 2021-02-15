@@ -1,25 +1,35 @@
 .signin {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .paper {
-	width: 80%;
-	max-width: 600px;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: 70vh;
+  padding: 2% 0;
 }
 
 .clickSignUp:hover {
-	cursor: pointer;
-	color: red;
+  cursor: pointer;
+  color: red;
 }
 
 .form {
-	display: grid;
-	margin-block: 60%;
-	margin-top: 10%;
-	justify-content: space-between;
-	height: 80%;
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70%;
 }
 
-.textfield {
+.paper div a {
+  color: rgb(22, 22, 66);
+}
+
+.paper div a:hover {
+  color: rgb(246, 25, 0);
 }

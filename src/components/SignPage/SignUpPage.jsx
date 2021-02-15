@@ -63,7 +63,7 @@ const SignUpPage = () => {
                         <TextField type="password" label="Re-enter password" name="re_password">
 
                         </TextField>
-                        <Button variant='outlined' style={{ marginTop: '20%' }}>
+                        <Button variant='contained' style={{ marginTop: '20%' }} color="secondary">
                             Sign Up
                         </Button>
                     </form>

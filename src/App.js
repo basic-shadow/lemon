@@ -31,7 +31,7 @@ class App extends React.Component {
                     <MainNavBar/>
                     <CatalogNavBar />
                     <Switch>
-                        <Route exact path="/" component={HomePage} />
+                        <Route exact path="/lemon" component={HomePage} />
                         <Route path="/catalog" component={CatalogPage} />
                         <Route path="/signin" component={SignInPage} />
                         <Route path="/signup" component={SignUpPage} />
