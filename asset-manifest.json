@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/lemon/static/css/main.4faa0d3e.chunk.css",
+    "main.js": "/lemon/static/js/main.ddebfccd.chunk.js",
+    "main.js.map": "/lemon/static/js/main.ddebfccd.chunk.js.map",
+    "runtime-main.js": "/lemon/static/js/runtime-main.e3d8c8b7.js",
+    "runtime-main.js.map": "/lemon/static/js/runtime-main.e3d8c8b7.js.map",
+    "static/js/2.9255d934.chunk.js": "/lemon/static/js/2.9255d934.chunk.js",
+    "static/js/2.9255d934.chunk.js.map": "/lemon/static/js/2.9255d934.chunk.js.map",
+    "index.html": "/lemon/index.html",
+    "static/css/main.4faa0d3e.chunk.css.map": "/lemon/static/css/main.4faa0d3e.chunk.css.map",
+    "static/js/2.9255d934.chunk.js.LICENSE.txt": "/lemon/static/js/2.9255d934.chunk.js.LICENSE.txt",
+    "static/media/bags.cec883f1.jpg": "/lemon/static/media/bags.cec883f1.jpg",
+    "static/media/blouses.58f6bc00.jpg": "/lemon/static/media/blouses.58f6bc00.jpg",
+    "static/media/boots.5afff5c3.jpg": "/lemon/static/media/boots.5afff5c3.jpg",
+    "static/media/coats.123f1128.jpeg": "/lemon/static/media/coats.123f1128.jpeg",
+    "static/media/jackets.f5e8cb20.jpg": "/lemon/static/media/jackets.f5e8cb20.jpg",
+    "static/media/jeans.ccdbb087.jpg": "/lemon/static/media/jeans.ccdbb087.jpg",
+    "static/media/kids.cc1bc9cc.jpg": "/lemon/static/media/kids.cc1bc9cc.jpg",
+    "static/media/men.9742abfd.jpg": "/lemon/static/media/men.9742abfd.jpg",
+    "static/media/printedshirts.ba5d577b.jpg": "/lemon/static/media/printedshirts.ba5d577b.jpg",
+    "static/media/women.31ed2a4a.jpg": "/lemon/static/media/women.31ed2a4a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e3d8c8b7.js",
+    "static/js/2.9255d934.chunk.js",
+    "static/css/main.4faa0d3e.chunk.css",
+    "static/js/main.ddebfccd.chunk.js"
+  ]
+}
