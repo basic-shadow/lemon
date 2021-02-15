@@ -54,22 +54,22 @@ export const catalogNavItems = [
     },
     {
         title: 'Catalog',
-        url: '/catalog',
+        url: '/lemon',
         cName: 'catalogItems'
     },
     {
         title: 'Shops',
-        url: '#',
+        url: '/lemon',
         cName: 'catalogItems'
     },
     {
         title: 'Brands',
-        url: '#',
+        url: '/lemon',
         cName: 'catalogItems'
     },
     {
         title: "Today's Deals",
-        url: '#',
+        url: '/lemon',
         cName: 'catalogItems'
     },
 ];
