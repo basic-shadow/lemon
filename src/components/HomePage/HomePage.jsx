@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from "react";
-import { Button, TextField, Card, CardContent, Typography, Grid, CardActionArea, Divider } from "@material-ui/core";
+import React from "react";
+import { Typography, Grid,  Divider } from "@material-ui/core";
 import { NavLink } from 'react-router-dom';
 
 import styles from "./HomePage.module.css";
@@ -7,13 +7,11 @@ import men from '../../images/men.jpg';
 import women from '../../images/women.jpg';
 import kids from '../../images/kids.jpg';
 import { GrCaretNext, GrCaretPrevious, GrWifiNone } from 'react-icons/gr';
-import { gsap } from 'gsap';
 import makeCarousel from 'react-reveal/makeCarousel';
 import Slide from 'react-reveal/Slide';
 import styled, { css } from 'styled-components';
 import Zoom from 'react-reveal/Zoom';
 import card1 from '../../images/card1.jpeg';
-import { findAllByDisplayValue } from "@testing-library/react";
 import bags from '../../images/bags.jpg';
 import blouses from '../../images/blouses.jpg';
 import boots from '../../images/boots.jpg';
