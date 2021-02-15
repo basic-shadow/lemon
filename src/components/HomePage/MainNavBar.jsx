@@ -4,7 +4,7 @@ import styles from "./HomePage.module.css";
 import { NavLink } from "react-router-dom";
 import { RiArrowDropDownLine, RiYoutubeFill } from 'react-icons/ri';
 import { FaTelegram, FaInstagram, FaFacebookF } from 'react-icons/fa';
-import { Button, MenuItem, Paper, Grow, ClickAwayListener, MenuList, Popper, Divider } from '@material-ui/core';
+import { Button, MenuItem, Paper, Grow, ClickAwayListener, MenuList, Popper} from '@material-ui/core';
 import { gsap } from 'gsap';
 
 

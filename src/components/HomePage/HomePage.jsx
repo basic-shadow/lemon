@@ -67,11 +67,12 @@ const HomePage = () => {
         return Object.keys(obj).map((item, index) => {
             return (
                 <div className={styles.card} key={index}>
-                    <NavLink to='/catalog'>
+                    <NavLink to={{pathname: '/catalog', state: {name: item}}}>
                         <div className={styles.cardcontent}>
                             <img src={obj[item]} />
                             <div className={styles.menText}>
-                                <Typography className={styles.textMen} style={{ fontSize: '2em', fontFamily: 'Lobster, cursive' }}>{item}
+                                <Typography className={styles.textMen} 
+                                style={{ fontSize: '2em', fontFamily: 'Lobster, cursive' }}>{item}
                                 </Typography>
                                 <GrCaretNext className={styles.next} />
                             </div>

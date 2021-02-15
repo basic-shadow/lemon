@@ -1,13 +1,75 @@
+.body {
+  margin: 1% 8%;
+}
+
 .topSelector {
   display: flex;
-  padding: 3%;
   flex-direction: column;
   text-align: center;
   color: rgb(97, 93, 93);
-  margin: 1% 8%;
+  margin: 2% 0;
 }
 
 .topSelector div p {
   padding: 3% 0;
   background: rgb(195, 51, 51);
+}
+
+.topSelector div a {
+  color: rgb(40, 40, 40);
+  font-size: 1.3rem;
+}
+
+.topSelector div a:hover {
+  color: rgb(195, 51, 51);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  column-gap: 2%;
+  row-gap: 8%;
+  grid-template-rows: 4;
+  width: 100%;
+}
+
+.container section {
+  display: flex;
+  flex-direction: column;
+}
+
+.container div:nth-child(2) h3 {
+  padding: 4% 0;
+  color: rgb(93, 16, 9);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 370px;
+}
+
+.card img {
+  position: absolute;
+  height: 300px;
+  width: 370px;
+  border-radius: 10%;
+}
+
+.card div:nth-child(2) {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 25px;
+  color: rgb(195, 51, 51);
+}
+
+.card h4,
+h5 {
+  position: relative;
+  top: 300px;
 }

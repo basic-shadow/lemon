@@ -1,601 +1,607 @@
 .popover {
-	pointer-events: none;
+  pointer-events: none;
 }
 
 .navBackground {
-	background-color: rgba(195, 195, 195, 0.3);
-	display: flex;
+  background-color: rgba(195, 195, 195, 0.3);
+  display: flex;
 }
 
 .mainNav {
-	display: flex;
-	align-items: center;
-	font-family: sans-serif;
-	justify-content: space-around;
-	width: 100%;
-	margin: 0 12%;
-	height: 4vh;
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 12%;
+  height: 4vh;
+}
+
+.mainNav div:nth-child(1) h5 {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .mainNavlinks {
-	display: flex;
-	list-style: none;
-	justify-content: space-around;
-	width: 10%;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 10%;
 }
 
 .chooseButtons .mainNavItems {
-	font-weight: 400;
-	color: rgb(0, 0, 0);
+  font-weight: 400;
+  color: rgb(0, 0, 0);
 }
 
 .chooseButtons .mainNavItems:hover {
-	font-weight: 500;
-	color: rgb(40, 29, 202);
+  font-weight: 500;
+  color: rgb(40, 29, 202);
 }
 
 .mainNavItems {
-	font-size: 1rem;
-	font-weight: 500;
-	color: rgb(0, 0, 0);
-	text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
 }
 
 .catalogNav {
-	display: flex;
-	margin: 3% 0 1% 8%;
-	align-items: center;
-	font-family: sans-serif;
-	justify-content: space-around;
-	font-size: 1.3em;
-	font-family: "Ranchers", cursive;
+  display: flex;
+  margin: 3% 0 1% 8%;
+  align-items: center;
+  font-family: sans-serif;
+  justify-content: space-around;
+  font-size: 1.3em;
+  font-family: "Ranchers", cursive;
 }
 
 .catalogItems {
-	color: rgb(33, 33, 33);
-	font-size: 1em;
-	font-weight: 500;
-	text-decoration: none;
+  color: rgb(33, 33, 33);
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .catalogItems:hover {
-	color: rgb(255, 0, 0);
-	transition: 0.3s;
+  color: rgb(255, 0, 0);
+  transition: 0.3s;
 }
 
 .navrefs {
-	display: flex;
-	justify-content: space-between;
-	width: 8%;
-	list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 8%;
+  list-style: none;
 }
 
 .navrefs li:hover {
-	color: rgba(0, 0, 0, 0.8);
-	cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 }
 
 .mainNavItems:hover {
-	color: rgb(25, 77, 60);
-	text-decoration: underline;
+  color: rgb(25, 77, 60);
+  text-decoration: underline;
 }
 
 .lemon {
-	width: 5%;
-	cursor: pointer;
+  width: 5%;
+  cursor: pointer;
 }
 
 .searchBar {
-	display: contents !important;
+  display: contents !important;
 }
 
 .btn {
-	left: 5%;
-	width: 6%;
-	font-size: 0.5em;
+  left: 5%;
+  width: 6%;
+  font-size: 0.5em;
 }
 
 .selectionmenu {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	height: 82vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 82vh;
 }
 
 .cardBox {
-	display: flex;
-	position: relative;
-	top: 0;
-	left: 0;
-	justify-content: space-around;
-	height: 100%;
-	width: 100%;
-	align-items: center;
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  align-items: center;
 }
 
 .cardBox .card {
-	position: relative;
-	width: 25%;
-	height: 80%;
+  position: relative;
+  width: 25%;
+  height: 80%;
 }
 
 .cardBox .card .cardcontent {
-	display: flex;
-	position: absolute;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	width: 100%;
-	z-index: 1000;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
 }
 
 .cardcontent img {
-	display: flex;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-	border-radius: 10%;
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10%;
 }
 
 .card:hover {
-	transform: translateY(-20px);
+  transform: translateY(-20px);
 }
 
 .cardcontent::before {
-	content: "";
-	position: absolute;
-	top: -5px;
-	bottom: -5px;
-	right: -5px;
-	left: -5px;
-	z-index: -1;
-	background: #fff;
+  content: "";
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+  z-index: -1;
+  background: #fff;
 }
 
 .cardcontent::after {
-	content: "";
-	background: #fff;
-	top: -2px;
-	left: -2px;
-	right: -2px;
-	bottom: -2px;
-	position: absolute;
-	z-index: -1;
-	filter: blur(1.2rem);
+  content: "";
+  background: #fff;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  position: absolute;
+  z-index: -1;
+  filter: blur(1.2rem);
 }
 
 .card .cardcontent .menText {
-	background: #fff;
-	position: absolute;
-	opacity: 0.7;
-	left: 22%;
-	top: 72%;
-	width: 50%;
-	height: 10%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  background: #fff;
+  position: absolute;
+  opacity: 0.7;
+  left: 22%;
+  top: 72%;
+  width: 50%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .textMen {
-	opacity: 0.8;
-	color: black;
+  opacity: 0.8;
+  color: black;
 }
 
 .next {
-	width: 10%;
+  width: 10%;
 }
 
 .card:hover .cardcontent .menText {
-	opacity: 1;
+  opacity: 1;
 }
 
 .card:hover .cardcontent .menText .textMen {
-	opacity: 1;
+  opacity: 1;
 }
 
 .card:hover .next {
-	transform: translateX(80%);
-	transition: 0.3s;
+  transform: translateX(80%);
+  transition: 0.3s;
 }
 
 .secondpage {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	color: black;
-	margin-top: 5%;
-	height: 65vh;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: black;
+  margin-top: 5%;
+  height: 65vh;
+  align-items: center;
 }
 
 .secondpageCont {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background: rgb(255, 255, 255);
-	border-radius: 40%;
-	position: absolute;
-	top: 20%;
-	width: 90%;
-	height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  border-radius: 40%;
+  position: absolute;
+  top: 20%;
+  width: 90%;
+  height: 70%;
 }
 
 .slides {
-	display: flex;
-	height: 32vh;
-	justify-content: center;
+  display: flex;
+  height: 32vh;
+  justify-content: center;
 }
 
 .eachslide {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	width: 27%;
-	justify-content: space-around;
-	cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 27%;
+  justify-content: space-around;
+  cursor: pointer;
 }
 
 .eachslide img {
-	border-radius: 50%;
-	margin: auto;
-	text-align: center;
-	height: 18vh;
-	object-fit: cover;
+  border-radius: 50%;
+  margin: auto;
+  text-align: center;
+  height: 18vh;
+  object-fit: cover;
 }
 .eachslide p {
-	font-family: "Roboto", sans-serif;
-	font-size: 1.2rem;
-	font-weight: 600;
-	padding-bottom: 20%;
-	text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 20%;
+  text-align: center;
 }
 
 .slides:hover > *:not(:hover) {
-	opacity: 0.4;
+  opacity: 0.4;
 }
 
 .popularcatalog {
-	display: flex;
-	font-size: 4rem;
-	align-items: flex-end;
-	color: black;
-	position: relative;
-	left: 5%;
+  display: flex;
+  font-size: 4rem;
+  align-items: flex-end;
+  color: black;
+  position: relative;
+  left: 5%;
 }
 
 .thirdpage {
-	display: grid;
-	grid-template-rows: 15% 85%;
-	position: relative;
-	left: 0;
-	top: 15vh;
-	height: 85vh;
-	width: 100%;
+  display: grid;
+  grid-template-rows: 15% 85%;
+  position: relative;
+  left: 0;
+  top: 15vh;
+  height: 85vh;
+  width: 100%;
 }
 
 .thirdpageHeaders {
-	display: flex;
-	font-size: 2.4rem;
-	position: relative;
-	left: 5%;
+  display: flex;
+  font-size: 2.4rem;
+  position: relative;
+  left: 5%;
 }
 
 .thirdpageHeaders h1 {
-	color: rgb(3, 20, 114);
+  color: rgb(3, 20, 114);
 }
 
 .thirdpageHeaders h2 {
-	transform: translate(10%, 18%);
+  transform: translate(10%, 18%);
 }
 
 .thirdpagebox {
-	display: grid;
-	grid-template-rows: repeat(3, minmax(220px, 1fr));
-	grid-template-columns: 10% 1fr 10%;
-	grid-gap: 20px;
-	position: relative;
-	width: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, minmax(220px, 1fr));
+  grid-template-columns: 10% 1fr 10%;
+  grid-gap: 20px;
+  position: relative;
+  width: 100%;
 }
 
 .thirdpagebox .box:nth-child(1) {
-	grid-row: 1;
-	grid-column: 2;
-	display: grid;
-	grid-template-columns: 40% 20%;
-	position: relative;
-	cursor: pointer;
-	transform-origin: right;
+  grid-row: 1;
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 40% 20%;
+  position: relative;
+  cursor: pointer;
+  transform-origin: right;
 }
 .thirdpagebox .box:nth-child(2) {
-	grid-row: 2;
-	grid-column: 2;
-	cursor: pointer;
-	display: grid;
-	grid-template-columns: 40% 20%;
-	position: relative;
-	transform-origin: right;
+  grid-row: 2;
+  grid-column: 2;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 40% 20%;
+  position: relative;
+  transform-origin: right;
 }
 .thirdpagebox .box:nth-child(3) {
-	grid-row: 3;
-	cursor: pointer;
-	grid-column: 2;
-	display: grid;
-	grid-template-columns: 40% 20%;
-	position: relative;
-	transform-origin: right;
+  grid-row: 3;
+  cursor: pointer;
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 40% 20%;
+  position: relative;
+  transform-origin: right;
 }
 
 .thirdpagebox .box:hover {
-	color: rgb(222, 2, 2);
-	transition: 0.3s;
-	transform-origin: left;
+  color: rgb(222, 2, 2);
+  transition: 0.3s;
+  transform-origin: left;
 }
 
 .thirdpagebox .box:hover .contentBox1 {
-	background: linear-gradient(225deg, rgb(33, 33, 63), rgb(10, 10, 54));
-	transition: transform 1.5s;
-	transform-origin: left;
-	width: 100%;
-	transform: translateX(300px);
-	grid-column: 1;
+  background: linear-gradient(225deg, rgb(33, 33, 63), rgb(10, 10, 54));
+  transition: transform 1.5s;
+  transform-origin: left;
+  width: 100%;
+  transform: translateX(300px);
+  grid-column: 1;
 }
 
 .thirdpagebox .box:hover .imgBox1 {
-	transition: transform 1.5s;
-	transform-origin: right;
-	transform: translateX(100px);
-	grid-column: 1;
+  transition: transform 1.5s;
+  transform-origin: right;
+  transform: translateX(100px);
+  grid-column: 1;
 }
 
 .thirdpagebox .box:hover .contentBox2 {
-	background: linear-gradient(225deg, rgb(33, 33, 63), rgb(10, 10, 54));
-	transition: transform 1.5s;
-	width: 100%;
-	right: 37%;
-	transform-origin: right;
-	transform: translateX(-300px);
-	grid-column: 3;
+  background: linear-gradient(225deg, rgb(33, 33, 63), rgb(10, 10, 54));
+  transition: transform 1.5s;
+  width: 100%;
+  right: 37%;
+  transform-origin: right;
+  transform: translateX(-300px);
+  grid-column: 3;
 }
 
 .thirdpagebox .box .imgBox1 {
-	background: #e5f0fa;
-	position: absolute;
-	transition: transform 0.8s;
-	transform-origin: left;
-	transform: translateX(-20px);
-	left: 0;
-	top: 0;
-	width: 40%;
-	height: 100%;
+  background: #e5f0fa;
+  position: absolute;
+  transition: transform 0.8s;
+  transform-origin: left;
+  transform: translateX(-20px);
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
 }
 
 .box .imgBox1 img {
-	position: relative;
-	float: left;
-	left: 0;
-	height: 100%;
-	object-fit: contain;
+  position: relative;
+  float: left;
+  left: 0;
+  height: 100%;
+  object-fit: contain;
 }
 .box .contentBox1 {
-	grid-column: 1;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: transform 1s;
-	transform: translateX(40px);
-	transform-origin: left;
-	left: 32%;
-	width: 68%;
+  grid-column: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s;
+  transform: translateX(40px);
+  transform-origin: left;
+  left: 32%;
+  width: 68%;
 }
 
 .thirdpagebox .box:hover .imgBox2 {
-	transition: transform 1.5s;
-	transform-origin: left;
-	transform: translateX(-100px);
-	grid-column: 1;
+  transition: transform 1.5s;
+  transform-origin: left;
+  transform: translateX(-100px);
+  grid-column: 1;
 }
 
 .box .contentBox1 .content1 {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 40px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 80px;
 }
 
 .thirdpagebox .box .imgBox2 {
-	background: #e5f0fa;
-	position: absolute;
-	transition: transform 0.8s;
-	transform-origin: right;
-	transform: translateX(20px);
-	right: 0;
-	top: 0;
-	width: 40%;
-	height: 100%;
+  background: #e5f0fa;
+  position: absolute;
+  transition: transform 0.8s;
+  transform-origin: right;
+  transform: translateX(20px);
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
 }
 
 .box .imgBox2 img {
-	position: relative;
-	float: right;
-	height: 100%;
-	object-fit: contain;
+  position: relative;
+  float: right;
+  height: 100%;
+  object-fit: contain;
 }
 .box .contentBox2 {
-	grid-column: 3;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: transform 1s;
-	transform: translateX(40px);
-	transform-origin: left;
-	right: 5%;
-	width: 68%;
+  grid-column: 3;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s;
+  transform: translateX(40px);
+  transform-origin: left;
+  right: 5%;
+  width: 68%;
 }
 
 .box .contentBox2 .content2 {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 40px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 80px;
 }
 
 .contentBox2 .content2 h2 {
-	margin-top: 5%;
-	transform: translate(10px, 20px);
+  margin-top: 5%;
+  transform: translate(10px, 20px);
 }
 
 .contentBox1 .content1 p {
-	opacity: 0;
+  opacity: 0;
 }
 
 .contentBox2 .content2 p {
-	opacity: 0;
+  opacity: 0;
 }
 
 .contentBox1 .content1 h2 {
-	margin-bottom: 5%;
-	transform: translate(5px, 25px);
+  margin-bottom: 5%;
+  transform: translate(5px, 25px);
 }
 
 .thirdpagebox .box:hover .contentBox1 .content1 h2 {
-	transform: translateX(-5px);
+  transform: translateX(-5px);
 }
 
 .thirdpagebox .box:hover .contentBox2 .content2 h2 {
-	transform: translate(-10px, -20px);
+  transform: translate(-10px, -20px);
 }
 
 .thirdpagebox .box:hover .contentBox1 .content1 p {
-	transition: transform 1s;
-	transform-origin: left;
-	transition-delay: 1s;
-	opacity: 1;
+  transition: transform 1s;
+  transform-origin: left;
+  transition-delay: 1s;
+  opacity: 1;
 }
 
 .thirdpagebox .box:hover .contentBox2 .content2 p {
-	transition: transform 1s;
-	transform-origin: right;
-	transition-delay: 1s;
-	opacity: 1;
+  transition: transform 1s;
+  transform-origin: right;
+  transition-delay: 1s;
+  opacity: 1;
 }
 
 .prelastpage {
-	display: flex;
-	flex-direction: column;
-	position: absolute;
-	top: 62%;
-	height: 140vh;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 62%;
+  height: 140vh;
+  width: 100%;
 }
 
 .emailsend {
-	display: flex;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-	margin-left: 10%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
 }
 .pagecontent {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	top: 0%;
-	left: 0%;
-	height: 50vh;
-	background: #455066;
-	margin-top: -1%;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  height: 50vh;
+  background: #455066;
+  margin-top: -1%;
+  justify-content: center;
+  align-items: center;
 }
 
 .enterEmail {
-	font-family: "Roboto", sans-serif;
-	margin-top: 1em;
-	color: #fff;
-	font-size: 1.2rem;
-	padding: 1.2rem 1.5rem;
-	border-radius: 0.3rem;
-	background: white;
-	border: none;
-	width: 28%;
+  font-family: "Roboto", sans-serif;
+  margin-top: 1em;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.3rem;
+  background: white;
+  border: none;
+  width: 28%;
 }
 
 .emailButton {
-	width: 4%;
-	height: 77%;
-	transform: translate(-252%, 15%);
-	font-weight: 200;
-	font-size: 20px;
-	background-color: white;
-	border-radius: 0.3rem;
-	transition-duration: 0.4s;
-	border: 2px solid rgb(65, 100, 100);
-	cursor: pointer;
+  width: 4%;
+  height: 77%;
+  transform: translate(-252%, 15%);
+  font-weight: 200;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 0.3rem;
+  transition-duration: 0.4s;
+  border: 2px solid rgb(65, 100, 100);
+  cursor: pointer;
 }
 
 .enterEmail:focus {
-	border: 2px solid;
-	box-shadow: 0.2em 0.2em 1.5em 0.3em rgb(68, 102, 102);
+  border: 2px solid;
+  box-shadow: 0.2em 0.2em 1.5em 0.3em rgb(68, 102, 102);
 }
 
 .labelEmail {
-	font-family: "Roboto", sans-serif;
-	font-size: 1.2rem;
-	margin-top: 0.7rem;
-	color: #fff;
-	font-weight: 600;
-	transition: all 0.3s;
-	transform: translate(-20rem, -4.4rem);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  margin-top: 0.7rem;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s;
+  transform: translate(-20rem, -4.4rem);
 }
 
 .enterEmail:placeholder-shown + .labelEmail {
-	opacity: 0;
-	transform: translate(-20rem, 0);
+  opacity: 0;
+  transform: translate(-20rem, 0);
 }
 
 .area1 {
-	position: absolute;
-	right: 5%;
-	height: 25vh;
-	bottom: -20%;
-	width: 15%;
-	background: rgba(49, 114, 149, 0.2);
-	border-radius: 15%;
-	transform: rotate(-20deg);
+  position: absolute;
+  right: 5%;
+  height: 25vh;
+  bottom: -20%;
+  width: 15%;
+  background: rgba(49, 114, 149, 0.2);
+  border-radius: 15%;
+  transform: rotate(-20deg);
 }
 .area2 {
-	position: absolute;
-	left: 4%;
-	height: 8vh;
-	top: 70%;
-	width: 5%;
-	background: rgba(49, 114, 149, 0.2);
-	border-radius: 15%;
-	transform: rotate(10deg);
+  position: absolute;
+  left: 4%;
+  height: 8vh;
+  top: 70%;
+  width: 5%;
+  background: rgba(49, 114, 149, 0.2);
+  border-radius: 15%;
+  transform: rotate(10deg);
 }
 
 .area3 {
-	position: absolute;
-	right: 20%;
-	height: 8vh;
-	top: 15%;
-	width: 5%;
-	background: rgba(33, 108, 148, 0.253);
-	border-radius: 5%;
-	transform: rotate(-5deg);
+  position: absolute;
+  right: 20%;
+  height: 8vh;
+  top: 15%;
+  width: 5%;
+  background: rgba(33, 108, 148, 0.253);
+  border-radius: 5%;
+  transform: rotate(-5deg);
 }
 
 .area4 {
-	position: absolute;
-	left: 30%;
-	height: 2.5vh;
-	top: 50%;
-	width: 1.5%;
-	background: rgba(34, 111, 153, 0.123);
-	border-radius: 15%;
-	transform: rotate(-10deg);
+  position: absolute;
+  left: 30%;
+  height: 2.5vh;
+  top: 50%;
+  width: 1.5%;
+  background: rgba(34, 111, 153, 0.123);
+  border-radius: 15%;
+  transform: rotate(-10deg);
 }
